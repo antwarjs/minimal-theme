@@ -1,5 +1,4 @@
 React = require 'react'
-config = require 'config'
 
 { main } = require 'react-coffee-elements'
 

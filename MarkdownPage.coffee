@@ -1,7 +1,6 @@
 React = require 'react'
 Paths = require 'antwar-core/PathsMixin'
 Router = require 'react-router'
-config = require 'config'
 
 { div } = require 'react-coffee-elements'
 
