@@ -9,8 +9,8 @@ var Blog = React.createClass({
 
   mixins: [ Router.State, Paths ],
   render: function() {
-    var posts = _.map(_.sortBy(this.getAllPosts(), 'date').reverse(), function(post) {
-      return <li>
+    var posts = _.map(_.sortBy(this.getAllPosts(), 'date').reverse(), function(post, i) {
+      return <li key={'post-' + i}>
         <h3>
           <Link to={'/blog/' + post.url}>{post.title}</Link>
           {post.draft ? <span>Draft</span> : null}
