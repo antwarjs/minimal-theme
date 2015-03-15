@@ -6,7 +6,7 @@ var Link = Router.Link;
 var Body = React.createClass({
 
 	render: function() {
-		var links = _.map(config.site.theme.navigation, function(link, i) {
+		var links = _.map(config.theme.navigation, function(link, i) {
 			return <li key={'link-' + i}><Link to={link.path} key={link.path}>{link.title}</Link></li>
 		});
 		return (
