@@ -9,7 +9,7 @@ var Post = React.createClass({
 
   render: function() {
     var post = this.getPost()
-    var author = post.author ? post.author : config.site.author
+    var author = post.author ? post.author : config.site.author.name
     return (
       <div>
         <h1>{post.title}</h1>
