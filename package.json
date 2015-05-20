@@ -23,7 +23,5 @@
   "peerDependencies": {
     "react": ">=0.12.2 < 1.0.0"
   },
-  "dependencies": {
-    "react-coffee-elements": "^0.1.0"
-  }
+  "dependencies": {}
 }
