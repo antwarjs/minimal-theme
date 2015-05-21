@@ -3,21 +3,21 @@ var Paths = require('antwar-core/PathsMixin');
 var Router = require('react-router');
 var config = require('config');
 
-var Post = React.createClass({
+var Item = React.createClass({
 
   mixins: [ Router.State, Paths ],
 
   render: function() {
-    var post = this.getPost()
-    var author = post.author ? post.author : config.author.name
+    var item = this.getItem()
+    var author = item.author ? item.author : config.author.name
     return (
       <div>
-        <h1>{post.title}</h1>
+        <h1>{item.title}</h1>
         <div>
-          {post.draft ? <span>Draft</span> : null}
-          <div dangerouslySetInnerHTML={{__html: post.content}} />
+          {item.draft ? <span>Draft</span> : null}
+          <div dangerouslySetInnerHTML={{__html: item.content}} />
         </div>
-        {post.date}
+        {item.date}
         {author ? <span>Authored by {author}</span> : null}
       </div>
     );
@@ -25,4 +25,4 @@ var Post = React.createClass({
 
 });
 
-module.exports = Post;
+module.exports = Item;

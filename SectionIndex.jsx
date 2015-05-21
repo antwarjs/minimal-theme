@@ -10,21 +10,21 @@ var Blog = React.createClass({
 
   mixins: [ Router.State, Paths ],
   render: function() {
-    var posts = _.map(_.sortBy(this.getAllPosts(), 'date').reverse(), function(post, i) {
-      return <li key={'post-' + i}>
+    var items = _.map(_.sortBy(this.getAllItems(), 'date').reverse(), function(item, i) {
+      return <li key={'item-' + i}>
         <h3>
-          <BlogLink post={post}>{post.title}</BlogLink>
-          {post.draft ? <span>Draft</span> : null}
+          <BlogLink item={item}>{item.title}</BlogLink>
+          {item.draft ? <span>Draft</span> : null}
         </h3>
 
-        <span>{post.date}</span>
-        <p>{post.preview}</p>
+        <span>{item.date}</span>
+        <p>{item.preview}</p>
       </li>
     });
     return (
       <div>
-        <h1>Blog Posts</h1>
-        <ul>{posts}</ul>
+        <h1>Blog Items</h1>
+        <ul>{items}</ul>
       </div>
     );
   }
