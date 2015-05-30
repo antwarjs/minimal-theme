@@ -1,7 +1,7 @@
 var React = require('react');
 var Router = require('react-router');
 var Paths = require('antwar-core/PathsMixin');
-var BlogLink = require('antwar-core/BlogLink');
+var SectionLink = require('antwar-core/SectionLink');
 var _ = require('lodash');
 
 var Link = Router.Link;
@@ -13,7 +13,7 @@ var Blog = React.createClass({
     var items = _.map(_.sortBy(this.getAllItems(), 'date').reverse(), function(item, i) {
       return <li key={'item-' + i}>
         <h3>
-          <BlogLink item={item}>{item.title}</BlogLink>
+          <SectionLink item={item}>{item.title}</SectionLink>
           {item.draft ? <span>Draft</span> : null}
         </h3>
 
