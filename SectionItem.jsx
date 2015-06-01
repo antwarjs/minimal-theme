@@ -14,7 +14,7 @@ var Item = React.createClass({
       <div>
         <h1>{item.title}</h1>
         <div>
-          {item.draft ? <span>Draft</span> : null}
+          {item.isDraft ? <span>Draft</span> : null}
           <div dangerouslySetInnerHTML={{__html: item.content}} />
         </div>
         {item.date}
