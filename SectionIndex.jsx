@@ -14,7 +14,7 @@ var Blog = React.createClass({
       return <li key={'item-' + i}>
         <h3>
           <SectionLink item={item}>{item.title}</SectionLink>
-          {item.draft ? <span>Draft</span> : null}
+          {item.isDraft ? <span>Draft</span> : null}
         </h3>
 
         <span>{item.date}</span>
