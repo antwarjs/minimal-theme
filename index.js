@@ -1,5 +1,5 @@
 module.exports = {
-	handlers: {
+  handlers: {
     sectionIndex: function() {
       return require('./SectionIndex.jsx');
     },
