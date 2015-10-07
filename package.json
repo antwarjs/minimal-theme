@@ -20,8 +20,7 @@
     "url": "https://github.com/antwarjs/minimal-theme/issues"
   },
   "homepage": "https://github.com/antwarjs/minimal-theme",
-  "peerDependencies": {
+  "dependencies": {
     "react": ">=0.12.2 < 1.0.0"
-  },
-  "dependencies": {}
+  }
 }
